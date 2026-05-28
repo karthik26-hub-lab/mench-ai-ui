@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mench AI - macOS Glass UI</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Phosphor Icons for UI elements -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- Elegant Font for Intro -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Elegant Intro Animation Screen -->
+  <div id="intro-screen">
+    <h1 class="intro-text">Mench.AI</h1>
+  </div>
+
+  <!-- Overlay for when sidebar is open (Mobile/Tablet) -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- macOS Style Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="app-icon-small">
+        <img src="1000176619.jpg" alt="Mench Logo" class="logo-img">
+      </div>
+      <h2>Mench AI</h2>
+    </div>
+    
+    <button class="new-chat-btn">
+      <i class="ph ph-plus"></i>
+      New conversation
+    </button>
+
+    <div class="empty-state">
+      <i class="ph ph-chat-circle"></i>
+      <p>No conversations yet</p>
+    </div>
+
+    <div class="sidebar-footer">
+      Powered by Mench
+    </div>
+  </aside>
+
+  <!-- Main App Content -->
+  <main class="app-container">
+    <header class="top-nav">
+      <button class="icon-btn" id="menu-btn">
+        <i class="ph ph-sidebar-simple"></i>
+      </button>
+      <div class="nav-center">
+        <!-- Optional title in header -->
+      </div>
+    </header>
+
+    <div class="scroll-area">
+      <div class="welcome-section">
+        <div class="app-icon-large">
+          <img src="1000176619.jpg" alt="Mench Logo" class="logo-img">
+        </div>
+        <h2 class="welcome-title">How can I help you?</h2>
+        <p class="welcome-subtitle">I'm Mench AI, ready to help with coding, writing, analysis, and much more.</p>
+
+        <div class="suggestion-grid">
+          <button class="suggestion-card">
+            <div class="card-icon"><i class="ph ph-code"></i></div>
+            <div class="card-text">
+              <h3>Write code</h3>
+              <p>Help me write a React component</p>
+            </div>
+          </button>
+          
+          <button class="suggestion-card">
+            <div class="card-icon"><i class="ph ph-book-open-text"></i></div>
+            <div class="card-text">
+              <h3>Explain concepts</h3>
+              <p>Explain how async/await works</p>
+            </div>
+          </button>
+
+          <button class="suggestion-card">
+            <div class="card-icon"><i class="ph ph-lightbulb"></i></div>
+            <div class="card-text">
+              <h3>Brainstorm ideas</h3>
+              <p>Creative project ideas for beginners</p>
+            </div>
+          </button>
+
+          <button class="suggestion-card">
+            <div class="card-icon"><i class="ph ph-magic-wand"></i></div>
+            <div class="card-text">
+              <h3>Improve writing</h3>
+              <p>Write a professional bio for my portfolio</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Claude-style Input Area -->
+    <div class="input-container">
+      <div class="input-box">
+        <input type="text" placeholder="Message Mench AI..." />
+        <button class="send-btn">
+          <i class="ph-fill ph-arrow-up"></i>
+        </button>
+      </div>
+      <div class="input-footer">
+        Press <span>Enter</span> to send, <span>Shift + Enter</span> for newline
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
